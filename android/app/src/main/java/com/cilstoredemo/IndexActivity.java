@@ -17,8 +17,9 @@ public class IndexActivity extends AppCompatActivity {
         jxBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: 只能通过class这种机制加载？这样取不到
-                Intent intent = new Intent(IndexActivity.this, MainActivity.class);
+                Intent intent = new Intent(IndexActivity.this, CILReactActivity.class);
+                intent.putExtra(CILReactActivity.BundleName, "index.android");
+                intent.putExtra(CILReactActivity.MainComponentName, "CILStoreDemo");
                 startActivity(intent);
             }
         });
@@ -27,7 +28,9 @@ public class IndexActivity extends AppCompatActivity {
         sxBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(IndexActivity.this, Main2Activity.class);
+                Intent intent = new Intent(IndexActivity.this, CILReactActivity.class);
+                intent.putExtra(CILReactActivity.BundleName, "index.android2");
+                intent.putExtra(CILReactActivity.MainComponentName, "CILStoreDemo2");
                 startActivity(intent);
             }
         });
