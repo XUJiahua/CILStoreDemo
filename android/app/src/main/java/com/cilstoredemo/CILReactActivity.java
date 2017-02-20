@@ -26,6 +26,7 @@ public class CILReactActivity extends ReactActivity {
         reactActivityDelegate.setReactNativeHost(new ReactNativeHost(MainApplication.getApplication()) {
             @Override
             public boolean getUseDeveloperSupport() {
+                // 使用本地bundle，设置为True，开发模式设置为False
                 return BuildConfig.DEBUG;
             }
 
